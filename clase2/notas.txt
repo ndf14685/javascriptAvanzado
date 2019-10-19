@@ -2,3 +2,72 @@ https://danielsanchez.com.ar/CursoJSAv/CursoSabado/
 
 Esta es la pagina del profesor donde nos deja todas las notas. 
 
+Memoria de Video en el DOM (Que hace el render)
+
+
+Diferencias entre funciones con eventos: 
+
+function sumar(a,b){
+
+    return a+b
+
+}
+
+var sumar = function(a,b){
+    return a+b
+}
+
+
+Estas dos funciones son para VALORES: number, boolean, string
+
+En cambio: 
+var sumar = function(a,b){
+    a[0]=11
+    return a[0]+b[0]
+}
+var arr1=[5]
+var arr2=[8]
+
+var res = sumar(arr1,arr2)
+
+
+Al modificar con a[0] el valor de arr1 cambia tambien-----> Por referencia 
+
+
+
+
+function sumar(a,b, ponerResultado){
+    ponerResultado(a,b)
+
+}
+
+function ponerResultado(a,b){
+    console.log(a+b)
+}
+
+
+
+
+function sumar(a,b, CALLBACK){
+    var r =(a,b)
+    cb (r)
+}
+
+function ponerResultado(r){
+    console.log(r)
+}
+
+Se simplifica asi: 
+
+sumar(5,7,r=>console.log(r))
+
+Y mas aun asi: 
+sumar(5,7,console.log)
+
+
+
+Callbaks: 
+Funciones que se llaman en otro momento, no se ejecutan directamente
+
+
+EventListeners:

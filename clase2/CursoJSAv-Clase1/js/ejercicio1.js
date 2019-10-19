@@ -23,7 +23,7 @@ var parrafo = document.createElement('p')
 parrafo.innerText = 'Hola soy un párrafo'
 parrafo.style.color = 'magenta'
 parrafo.id = 'texto1'
-parrafo.classList.add('txt')
-document.body.appendChild(parrafo)
+parrafo.classList.add('txt')  //Hasta aca esta en memoria de la maquina
+document.body.appendChild(parrafo)  //Aca pasa a memoria de video
 
 
