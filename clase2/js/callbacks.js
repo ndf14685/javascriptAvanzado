@@ -81,7 +81,7 @@ uno.addEventListener('click', function () {
 
 
 dos.addEventListener('click', function () {
-    
+
 
     console.log('click DOS')
 }, true);
@@ -101,13 +101,13 @@ var botonDinamicoCreado = false
 
 estatico.addEventListener('click', function () {
     if (!botonDinamicoCreado) {
-        
-    
-    var dinamico = document.createElement('button')
-    dinamico.id = 'dinamico'
-    dinamico.innerText = 'dinamico'
-    document.body.appendChild(dinamico)
-    botonDinamicoCreado = true
+
+
+        var dinamico = document.createElement('button')
+        dinamico.id = 'dinamico'
+        dinamico.innerText = 'dinamico'
+        document.body.appendChild(dinamico)
+        botonDinamicoCreado = true
     }
 })
 
@@ -119,11 +119,11 @@ dinamico.addEventListener('click', function () {
 }) */
 
 
-document.addEventListener('click', function (e){
-    var id =e.target.id
-/*     console.log("Evento Global ", id )
- */
-    if (id=='dinamico'){
+document.addEventListener('click', function (e) {
+    var id = e.target.id
+    /*     console.log("Evento Global ", id )
+     */
+    if (id == 'dinamico') {
         console.log("Soy dinamico")
     }
 })
@@ -131,21 +131,21 @@ document.addEventListener('click', function (e){
 
 var link = document.getElementById('link')
 
-link.addEventListener ('click',function(event){
+link.addEventListener('click', function (event) {
     event.preventDefault()
     console.log("Click en link ")
 })
 
 var infoResize = document.getElementById('info-resize')
 window.addEventListener('resize', () => {
-/* console.log('resize!!!!')
- */
-infoResize.innerText = "El tamaño del navegador es " + outerWidth + 'x' + outerHeight + ' y el tamano del documento es ' + innerWidth + 'x' + innerHeight
+    /* console.log('resize!!!!')
+     */
+    infoResize.innerText = "El tamaño del navegador es " + outerWidth + 'x' + outerHeight + ' y el tamano del documento es ' + innerWidth + 'x' + innerHeight
 
 })
 
 
-var ev = new Event("look", {'bubbles': true, 'cancelable': false})
+var ev = new Event("look", { 'bubbles': true, 'cancelable': false })
 
 document.addEventListener("look", () => {
     console.log("Mi evento propio look")
