@@ -71,3 +71,19 @@ Funciones que se llaman en otro momento, no se ejecutan directamente
 
 
 EventListeners:
+
+
+/* Parametro en false, el tercer parametro de Enventlistener es: 
+false: Boobling
+true: Capturing */
+
+
+
+outerHeight
+1053
+outerWidth
+1854
+innerHeight
+949
+innerWidth
+863
